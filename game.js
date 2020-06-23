@@ -23,6 +23,10 @@ $(".options button").click(function() {
     $(".player-hand").attr("src", "images/" + playerChoice + ".png");
     $(".computer-hand").attr("src", "images/" + computerInput + ".png");
 
+    //removes animation so that next time button is pressed animation is added again.
+    $(".player-hand").removeClass("animation");
+    $(".computer-hand").removeClass("animation2");
+
     checkWinner(playerChoice, computerInput);
   }, 2000);
 });
